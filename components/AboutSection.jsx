@@ -7,6 +7,8 @@ const AboutSection = () => {
                     Autism Abilities is a team of dedicated and caring professionals who are passionate about empowering and supporting autistic people to live life well.<br /><br />
                     As an autism-specific service we understand that the needs of autistic person are as individual as they are, and this knowledge informs and inspires our work every single day.<br /><br />
                     Autism Abilities is an includsive and neurodiversity-affirming organisation. Many of us have lived experience of neurodiversity including autism and we strongly value the unique perspectives of autistic and neurodiverse people.
+                    <br /><br />
+                    Autism Abilities is an NDIS registered service provider providing support coordination, specialist support coordination and positive behaviour support services as well as workshops and training for autistic people, their loved ones and the community.
                 </p>
             </div>
             <div className="flex-2 flex items-center justify-center">
