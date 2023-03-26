@@ -1,7 +1,7 @@
 import { useCallback } from "react";
 import { useState } from "react";
 
-const Header = () => {
+const Navbar = () => {
 
     const [showMobileNav, setShowMobileNav] = useState(true);
 
@@ -37,7 +37,7 @@ const Header = () => {
     }, [showMobileNav, setShowMobileNav]);
 
     return (
-        <header>
+        <nav>
             <div className="container mx-auto px-6 py-5 flex justify-between items-center">
                 <a class="font-bold text-3xl lg:text-4xl" href="#">
                     Autism Abilities
@@ -62,7 +62,7 @@ const Header = () => {
                 </div>
             </div>
             {/* MOBILE NAVIGATION MENU */}
-            <div className={`${showMobileNav ? '' : 'hidden'} mobile-menu bg-white fixed right-0 px-8 py-4`}>
+            <div className={`${showMobileNav ? '' : 'hidden'} lg:hidden mobile-menu bg-white fixed right-0 px-8 py-4`}>
                 {
                     links.map((item, index) => (
                         <a class="block my-4 mx-4 hover:font-semibold" key={item.title} href={item.link}>{item.title}</a>
@@ -70,8 +70,8 @@ const Header = () => {
                 }
                 <a class="bg-red-400 text-white font-bold rounded-md py-2 px-2 shadow-lg uppercase tracking-wider hover:bg-white hover:text-red-400 transition block w-[150px] text-center hover:border-red-400 border-transparent border-2" href="#">Contact</a>
             </div>
-        </header>
+        </nav>
     )
 }
 
-export default Header;
+export default Navbar;
