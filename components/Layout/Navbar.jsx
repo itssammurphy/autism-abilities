@@ -28,16 +28,12 @@ const Navbar = () => {
         }
     ];
 
-    const toggleMobileMenu = useCallback(() => {
-        if (!showMobileNav) {
-            setShowMobileNav(true);
-        } else {
-            setShowMobileNav(false);
-        }
-    }, [showMobileNav, setShowMobileNav]);
+    const toggleMobileMenu = () => {
+        setShowMobileNav(!showMobileNav);
+    };
 
     return (
-        <nav>
+        <nav className="fixed top-0 left-0 z-10 w-full bg-white">
             <div className="container mx-auto px-6 py-5 flex justify-between items-center">
                 <a class="font-bold text-3xl lg:text-4xl" href="#">
                     Autism Abilities
@@ -62,7 +58,7 @@ const Navbar = () => {
                 </div>
             </div>
             {/* MOBILE NAVIGATION MENU */}
-            <div className={`${showMobileNav ? '' : 'hidden'} lg:hidden mobile-menu bg-white fixed right-0 px-8 py-4`}>
+            <div className={`${showMobileNav ? '' : 'hidden'} mobile-menu bg-white fixed right-0 px-8 py-4 z-10`}>
                 {
                     links.map((item, index) => (
                         <a class="block my-4 mx-4 hover:font-semibold" key={item.title} href={item.link}>{item.title}</a>
